@@ -1,0 +1,116 @@
+def primeiraSala():
+    print('''Bem vindo(a) a primeira sala, onde será a sessão de \n
+            ***************************
+            **** Piratas do Caribe ****
+            ***************************
+        ''')
+
+    sala_01 = []
+    cadeiras_01 = []
+    lugaresDisponiveis = 5
+    cliente_01 = int(input('Quantos lugares você quer? '))
+    cadeiras_01.append([cliente_01])
+
+    if cliente_01 > 5:
+        print('Você excedeu a quantidade de lugares, por favor, volte mais tarde.')
+        quit()
+        
+    else:
+        print('''
+           *********************************************
+           *  Você comprou {} lugares para assistir Piratas do Caribe! *
+           *********************************************
+            '''.format(cadeiras_01))
+
+    perg = True
+
+    while perg:
+            print('''
+                Escolha a fileira que deseja sentar com {} lugares que você comprou:
+                [0] - para sair.
+                [1] - para a primeira fileira.
+                [2] - para segunda fileira.
+                [3] - para terceira fileira.
+                [4] - para quarta fileira.
+                [5] - para quinta fileira.
+
+            '''.format(cliente_01))
+    
+            perg = int(input('Escolha: '))
+        
+            if (perg == 1):
+                sala_01.append([cliente_01])
+                print('Você escolheu a primeira fileira! \n Tenha um ótimo filme :D ')
+                quit()
+            if (perg == 0):
+                print('Saindo...')
+
+def segundaSala():
+    print('''Bem vindo(a) a primeira sala, onde será a sessão de \n
+            ***************************
+            **** Homem de Ferro ****
+            ***************************
+        ''')
+
+    sala_01 = []
+    cadeiras_01 = []
+    lugaresDisponiveis = 5
+    cliente_01 = int(input('Quantos lugares você quer? '))
+    cadeiras_01.append([cliente_01])
+
+    if cliente_01 > 5:
+        print('Você excedeu a quantidade de lugares, por favor, volte mais tarde.')
+        quit()
+        
+    else:
+        print('''
+           *********************************************
+           *  Você comprou {} lugares para assistir Homem de Ferro! *
+           *********************************************
+            '''.format(cadeiras_01))
+
+    perg = True
+
+    while perg:
+            print('''
+                Escolha a fileira que deseja sentar com {} lugares que você comprou:
+                [0] - para sair.
+                [1] - para a primeira fileira.
+                [2] - para segunda fileira.
+                [3] - para terceira fileira.
+                [4] - para quarta fileira.
+                [5] - para quinta fileira.
+
+            '''.format(cliente_01))
+    
+            perg = int(input('Escolha: '))
+        
+            if (perg == 1):
+                sala_01.append([cliente_01])
+                print('Você escolheu a primeira fileira! \n Tenha um ótimo filme :D ')
+                quit()
+            if (perg == 0):
+                print('Saindo...')
+
+
+
+op = True
+
+while op:
+    print('Bem vindo(a) ao CineIPESU!')
+    print('''
+        Escolha uma das opções abaixo:
+        [0] - para sair.
+        [1] - para ir a primeira sala.
+        [2] - para ir a segunda sala.
+
+        ''')
+    
+    op = int(input('Escolha: '))
+
+    if (op == 1):
+        primeiraSala()
+    if (op == 2):
+        segundaSala()
+    if (op == 0):
+        print('Você saiu do cinema!')
